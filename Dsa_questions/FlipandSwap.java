@@ -5,21 +5,21 @@ public class FlipandSwap {
                 { 1, 0, 1 },
                 { 0, 0, 0 }
         };
-        print((swapvalue(flip(array))));
+        print(swapValue(flip(array)));
     }
 
     public static int[][] flip(int[][] array) {
-        int[][] result = new int[array[0].length][array.length];
+        int[][] result = new int[array.length][array[0].length];
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
-                result[j][array.length - 1 - i] = array[i][j];
+                result[i][array[i].length - 1 - j] = array[i][j];
             }
         }
         return result;
     }
 
-    public static int[][] swapvalue(int[][] array) {
-        int[][] result = new int[array[0].length][array.length];
+    public static int[][] swapValue(int[][] array) {
+        int[][] result = new int[array.length][array[0].length];
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 if (array[i][j] != 0) {
@@ -35,7 +35,7 @@ public class FlipandSwap {
     public static void print(int[][] array) {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
-                System.out.printf(array[i][j] + " " );
+                System.out.printf(array[i][j] + " ");
             }
             System.out.println();
         }
